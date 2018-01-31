@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 来和我聊天吧 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <view class="userinfo-nickname">
+        你好呀，{{userInfo.nickName}}
+      </view>
+    </block>
+  </view>
+  <!-- 菜单列表 -->
+  <view class="menu">
+    <navigator url="../main/talkWindow?type=liaoren"><button class='liaoren' plain>撩人机器人</button></navigator>
+    <navigator url=""><button class='happy' type="primary" plain>我要报喜</button></navigator>
+    <navigator url=""><button class='complain' type="warn" plain>我要抱怨</button></navigator>
+    <navigator url=""><button class='abuse' type="warn" plain>我要羞辱你</button></navigator>
+    <navigator url="../main/bite"><button class='bite' type="warn" plain>我要咬你</button></navigator>
+  </view>
+  <view class='Kanshan--dynamic'>
+    <image src='../../images/zhihu.png'></image>
+  </view>
+  <view class='Kanshan--dynamic_hidden'></view>
+</view>

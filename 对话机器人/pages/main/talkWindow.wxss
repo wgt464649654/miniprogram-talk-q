@@ -1,0 +1,52 @@
+.talk-window {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  background: #F3F3F3;
+}
+
+.talk-window .content {
+  padding: 10px 5px;
+}
+
+.single_send_msg {
+  text-align: right;
+  height: 50px;
+}
+
+.single_send_msg text {
+  background: #1AAD19;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.single_receive_msg {
+  text-align: left;
+  height: 50px;
+}
+
+.single_receive_msg text {
+  background: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.talk-window .edit {
+  position: fixed;
+  z-index: 9;
+  background: white;
+  box-sizing: border-box;
+  bottom: 2px;
+  padding: 2px 5px;
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.send-input {
+  height: 100%;
+  width: 70vw;
+}

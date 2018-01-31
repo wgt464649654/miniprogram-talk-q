@@ -1,0 +1,18 @@
+<view class='talk-window'>
+  <view class='content'>
+    <view wx:for='{{showMessages}}' wx:for-item='message' wx:key='{{message.text}}'>
+      <view wx:if='{{message.type === "send"}}' class='single_send_msg'>
+        <text class='mgr_5'>{{message.text}}</text>
+        <image class="square_mini_pic" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      </view>
+      <view wx:if='{{message.type === "receive"}}' class='single_receive_msg'>
+        <image class="square_mini_pic" src="../../images/robot.jpg" background-size="cover"></image>
+        <text class='mlr_5'>{{message.text}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='edit'>
+    <view bindtap='sendMessage' class='mini-button'>发送</view>
+    <input value='{{blankValue}}' cursor-spacing='20' class='send-input' bindblur='msgInputEvent'></input>
+  </view>
+</view>

@@ -1,0 +1,125 @@
+
+.userinfo {
+  min-height: 64px;
+  margin-top: 100px;
+  animation: infoMove 2s;
+  animation-delay:1s;
+  animation-fill-mode: forwards;
+}
+
+.userinfo-avatar {
+  width: 64px;
+  height: 64px;
+  margin-left: calc(50% - 32px);
+  border-radius: 50%;
+  animation: avatarMove 2s;
+  animation-delay:1s;
+  animation-fill-mode: forwards;
+}
+
+.userinfo-nickname {
+  margin-left: calc(50% - 60px);
+  opacity: 0;
+  width: 120px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: #aaa;
+  animation: nameMove 2s ;
+  animation-delay:1s;
+  animation-fill-mode: forwards;
+}
+
+.menu {
+  margin-top: 10px;
+  opacity: 0;
+  animation: opacityShow 2s;
+  animation-delay:1s;
+  animation-fill-mode: forwards;
+}
+
+.menu button {
+  margin-bottom: 10px;
+}
+
+@keyframes infoMove {
+  0% {
+  }
+  100% {
+    margin-top: 0px;
+    margin-left: calc(100% - 74px);
+  }
+}
+
+@keyframes avatarMove {
+  0% {
+  }
+  100% {
+  }
+}
+
+@keyframes nameMove {
+  0% {
+  }
+  100% {
+    margin-left: calc(100% - 194px);
+    margin-top: -44px;
+    opacity: 1;
+  }
+}
+
+.liaoren {
+  background: url(http://img1.imgtn.bdimg.com/it/u=611991521,254006198&fm=27&gp=0.jpg) no-repeat;
+  background-size:15% 100%;
+}
+
+.happy {
+  background: url(http://img5.imgtn.bdimg.com/it/u=3843130513,1723497110&fm=200&gp=0.jpg) no-repeat;
+  background-size:15% 100%;
+}
+
+.complain {
+  background: url(https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=1836327264,537727500&fm=85&s=96004DA517B1619E1B31157A03005038&w=121&h=75&img.JPEG) no-repeat;
+  background-size:15% 100%;
+}
+.abuse {
+  background: url(https://ss0.baidu.com/73F1bjeh1BF3odCf/it/u=2138927799,2778322786&fm=85&s=7828BE55480345450692AC680300E01B) no-repeat;
+  background-size:15% 100%;
+}
+
+.bite {
+  background: url(https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1367713562,2616392863&fm=27&gp=0.jpg) no-repeat;
+  background-size:15% 100%;
+}
+
+.Kanshan--dynamic {
+  width: 100vw;
+  height: 120px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.Kanshan--dynamic_hidden {
+  position: absolute;
+  left: 120px;
+  width: calc(100% - 120px);
+  height: 120px;
+  background: white;
+}
+
+.Kanshan--dynamic image {
+  position: absolute;
+  width: 6480px;
+  height: 120px;
+  animation: dynamic 2.4s steps(54) infinite; 
+}
+@keyframes dynamic {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -6480px;
+  }
+}
+
+
