@@ -1,3 +1,6 @@
+page {
+  background: white;
+}
 
 .userinfo {
   min-height: 64px;

@@ -6,29 +6,33 @@
 }
 
 .talk-window .content {
-  padding: 10px 5px;
+  padding: 10px 5px 40px 5px;
 }
 
 .single_send_msg {
+  margin-bottom: 10px;
   text-align: right;
-  height: 50px;
-}
-
-.single_send_msg text {
-  background: #1AAD19;
-  padding: 5px;
-  border-radius: 5px;
 }
 
 .single_receive_msg {
+  margin-bottom: 10px;
   text-align: left;
-  height: 50px;
 }
 
-.single_receive_msg text {
+.talk-img {
+  width: 40px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.talk-text {
+  display: inline-block;
+  max-width: calc(100% - 60px);
   background: white;
-  padding: 5px;
+  padding: 9px 5px;
   border-radius: 5px;
+  word-wrap: break-word;
+  text-align: left;
 }
 
 .talk-window .edit {
@@ -36,7 +40,7 @@
   z-index: 9;
   background: white;
   box-sizing: border-box;
-  bottom: 2px;
+  bottom: 0;
   padding: 2px 5px;
   width: 100%;
   border: 1px solid black;

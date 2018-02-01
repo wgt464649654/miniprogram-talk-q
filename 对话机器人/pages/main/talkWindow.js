@@ -13,12 +13,12 @@ Page({
       qianzou: [
         {
           question: '叫我干啥！',
-          answer: '我不听，我要去吃鸡了，88',
+          answer: '我不听，我要去吃鸡了，再见，拜拜，色呦哪啦，888888',
         }
       ],
       bapo: [
         {
-          question: '你和你对象昨天晚上去干嘛了啊？',
+          question: '哇哦，你和你对象昨天晚上去干嘛了啊？',
           answer: '好狗粮，我饱了！',
         }
       ],
@@ -57,7 +57,7 @@ Page({
       setTimeout(() => {
         message = _this.data.messageForSend
         _this.messageToShow(message)
-      }, 500)
+      }, 400)
     }
     if (message) {
       _this.messageToShow(message)
@@ -115,5 +115,5 @@ Page({
     this.setData({
       type: options.type
     })
-  }  
+  },
 })
