@@ -9,6 +9,25 @@ Page({
           question: '我想问一条路？',
           answer: '去往你心里的路!',
         }
+      ],
+      qianzou: [
+        {
+          question: '叫我干啥！',
+          answer: '我不听，我要去吃鸡了，88',
+        }
+      ],
+      bapo: [
+        {
+          question: '你和你对象昨天晚上去干嘛了啊？',
+          answer: '好狗粮，我饱了！',
+        }
+      ],
+      daodao: [
+        {
+          question: '天冷了，多穿点，秋裤穿了没？',
+          answer1: '没穿？赶紧回去穿！',
+          answer2: '都中年人了还要什么风度！',
+        }
       ]
     },
     currentQuestions: [],
@@ -38,7 +57,7 @@ Page({
       setTimeout(() => {
         message = _this.data.messageForSend
         _this.messageToShow(message)
-      }, 100)
+      }, 500)
     }
     if (message) {
       _this.messageToShow(message)
@@ -61,8 +80,15 @@ Page({
   },
 
   robortResponse: function (msg) {
-    if (msg.indexOf('什么') > -1) {
+    if (this.data.type === 'liaoren' && msg.indexOf('什么') > -1) {
       this.addNewResponse('answer')
+    }
+    if (['qianzou', 'bapo'].indexOf(this.data.type) > -1) {
+      this.addNewResponse('answer')
+    }
+    if (['daodao'].indexOf(this.data.type) > -1) {
+      this.addNewResponse('answer1')
+      this.addNewResponse('answer2')
     }
   },
 
@@ -72,11 +98,7 @@ Page({
     let questionNum = this.data.questionNum
     let questions = this.data.currentQuestions
     let text = ''
-    if (respType === 'question') {
-      text = questions[questionNum].question
-    } else if (respType === 'answer') {
-      text = questions[questionNum].answer
-    }
+    text = questions[questionNum][respType]
     this.data.showMessages.push({
       text: text,
       type: 'receive'
