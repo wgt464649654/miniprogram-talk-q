@@ -32,6 +32,10 @@ page {
   margin-left: 5px;
 }
 
+.mgt_10 {
+  margin-top: 10px;
+}
+
 .abs {
   position: absolute;
 }

@@ -13,6 +13,17 @@
 	"projectname": "github%E5%B0%8FQ",
 	"isGameTourist": false,
 	"condition": {
+		"weapp": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "loading",
+					"pathName": "pages/main/wgtloading",
+					"query": ""
+				}
+			]
+		},
 		"search": {
 			"current": -1,
 			"list": []

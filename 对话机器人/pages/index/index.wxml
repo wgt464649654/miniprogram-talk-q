@@ -11,11 +11,11 @@
   </view>
   <!-- 菜单列表 -->
   <view class="menu">
-    <navigator url="../main/talkWindow?type=liaoren"><button class='liaoren' plain>撩人小Q</button></navigator>
-    <navigator url="../main/talkWindow?type=qianzou"><button class='happy' type="primary" plain>欠揍小Q</button></navigator>
-    <navigator url="../main/talkWindow?type=bapo"><button class='complain' type="warn" plain>八婆小Q</button></navigator>
-    <navigator url="../main/talkWindow?type=daodao"><button class='abuse' type="warn" plain>叨叨小Q</button></navigator>
-    <navigator url=""><button class='bite' type="warn" plain>敬请期待小Q...</button></navigator>
+    <navigator url="../main/talkwindow?type=liaoren"><button class='liaoren' plain>撩人小Q</button></navigator>
+    <navigator url="../main/talkwindow?type=qianzou"><button class='happy' type="primary" plain>欠揍小Q</button></navigator>
+    <navigator url="../main/talkwindow?type=bapo"><button class='complain' type="warn" plain>八婆小Q</button></navigator>
+    <navigator url="../main/talkwindow?type=daodao"><button class='abuse' type="warn" plain>叨叨小Q</button></navigator>
+    <navigator url="../main/wgtloading"><button class='bite' type="warn" plain>敬请期待小Q...</button></navigator>
   </view>
   <view class='Kanshan--dynamic'>
     <image src='../../images/zhihu.png'></image>

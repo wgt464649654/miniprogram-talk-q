@@ -1,0 +1,8 @@
+<view class='wgt-loading'>
+  <view class="logo">
+    <view class="white"></view>
+    <view class="orange"></view>
+    <view class="red"></view>
+  </view>
+  <view class="mgt_10">正在努力生产小Q中 ...</view>
+</view>
