@@ -8,6 +8,13 @@ Page({
         {
           question: '我想问一条路？',
           answer: '去往你心里的路!',
+          rejectAnswer: '请按套路出牌',
+          endFlag: 'answer'
+        },
+        {
+          question: '5秒钟后我要为你放烟花！',
+          auto: true,
+          func: 'playFireworks'
         }
       ],
       qianzou: [
@@ -18,8 +25,8 @@ Page({
       ],
       bapo: [
         {
-          question: '哇哦，你和你对象昨天晚上去干嘛了啊？',
-          answer: '好狗粮，我饱了！',
+          question: '小Q还在搜集八婆咨询。。。',
+          answer: '小Q还在搜集八婆咨询。。。',
         }
       ],
       daodao: [
@@ -80,8 +87,12 @@ Page({
   },
 
   robortResponse: function (msg) {
-    if (this.data.type === 'liaoren' && msg.indexOf('什么') > -1) {
-      this.addNewResponse('answer')
+    if (this.data.type === 'liaoren' && this.data.questionNum === 0) {
+      if (msg.indexOf('什么') > -1) {
+        this.addNewResponse('answer')
+      } else {
+        this.addNewResponse('rejectAnswer')
+      }
     }
     if (['qianzou', 'bapo'].indexOf(this.data.type) > -1) {
       this.addNewResponse('answer')
@@ -99,6 +110,8 @@ Page({
     let questions = this.data.currentQuestions
     let text = ''
     text = questions[questionNum][respType]
+    let endFlag = questions[questionNum].endFlag
+    let auto = questions[questionNum].auto
     this.data.showMessages.push({
       text: text,
       type: 'receive'
@@ -106,9 +119,29 @@ Page({
     setTimeout(
       () => {
         this.setData({
-          showMessages: this.data.showMessages
+          showMessages: this.data.showMessages,
         })
       }, 1000)
+
+    if (auto) {
+      if (questions[questionNum].func === 'playFireworks') {
+        setTimeout(() => {
+          this.setData({
+            fireworks: 'play'
+          })
+        }, 5000)
+      }
+    }
+
+    if (respType === endFlag) {
+      this.setData({
+        questionNum: questionNum + 1
+      })
+      setTimeout(
+        () => {
+          this.addNewResponse('question')
+        }, 2000)
+    }
   },
 
   onLoad: function (options) {
@@ -116,4 +149,9 @@ Page({
       type: options.type
     })
   },
+
+  onReady: function (e) {
+    var context = wx.createCanvasContext('fireworks')
+    
+  }
 })

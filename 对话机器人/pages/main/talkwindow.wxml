@@ -1,3 +1,7 @@
+<!-- <view wx:if='{{fireworks === "play"}}' class='fireworks'> -->
+<view class='fireworks'>
+  <canvas canvas-id='fireworks'></canvas>
+</view>
 <view class='talk-window'>
   <view class='content'>
     <view wx:for='{{showMessages}}' wx:for-item='message' wx:key='{{message.text}}'>
