@@ -3,6 +3,9 @@ const app = getApp()
 Page({
   data: {
     showMessages: [],
+    playDot: true,
+    playLine: false,
+    played: false,
     allQuestions: {
       liaoren: [
         {
@@ -94,6 +97,11 @@ Page({
         this.addNewResponse('rejectAnswer')
       }
     }
+    if (this.data.type === 'liaoren' && this.data.questionNum === 1) {
+      if (msg.indexOf('放烟花') > -1) {
+        this.addNewResponse('question')
+      }
+    }
     if (['qianzou', 'bapo'].indexOf(this.data.type) > -1) {
       this.addNewResponse('answer')
     }
@@ -129,6 +137,9 @@ Page({
           this.setData({
             fireworks: 'play'
           })
+          if (!this.data.played) {
+            this.playFireworks()
+          }
         }, 5000)
       }
     }
@@ -150,8 +161,34 @@ Page({
     })
   },
 
-  onReady: function (e) {
-    var context = wx.createCanvasContext('fireworks')
-    
+  close: function () {
+    console.log(this)
+    this.setData({
+      fireworks: null
+    })
+  },
+
+  playFireworks: function() {
+    this.setData({
+      played: true
+    })
+    setTimeout(() => {
+      this.setData({
+        playDot: false,
+        playLine: true
+      })
+      setInterval(() => {
+        this.setData({
+          playDot: false,
+          playLine: true
+        })
+      }, 2000)
+    }, 1600)
+    setInterval(() => {
+      this.setData({
+        playDot: true,
+        playLine: false
+      })
+    }, 2000)
   }
 })

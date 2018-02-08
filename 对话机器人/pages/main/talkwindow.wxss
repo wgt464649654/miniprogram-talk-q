@@ -73,7 +73,111 @@
   left: 50%;
   animation: up 1.5s ease-in;
   animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
+  /* animation-iteration-count: infinite;  */
+}
+
+.white-line {
+  position: absolute;
+  bottom: 80%;
+  width: 20px;
+  height: 4px;
+  border-radius: 2px;
+  background: white;
+  left: calc(50% - 10px);
+  transform: rotate(-45deg);
+  animation: whiteline 1.5s ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes whiteline {
+  0% {
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    bottom: 50%;
+    left: 0;
+    opacity: 0;
+  }
+}
+
+.purple-line {
+  position: absolute;
+  bottom: 80%;
+  width: 20px;
+  height: 4px;
+  border-radius: 2px;
+  background: purple;
+  left: calc(50% + 10px);
+  transform: rotate(45deg);
+  animation: purpleline 1.5s ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes purpleline {
+  0% {
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    bottom: 50%;
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+.yellow-line {
+  position: absolute;
+  bottom: calc(80% + 12px);
+  width: 20px;
+  height: 4px;
+  border-radius: 2px;
+  background: yellow;
+  left: calc(50% + 10px);
+  transform: rotate(-45deg);
+  animation: yellowline 1.5s ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes yellowline {
+  0% {
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    bottom: 100%;
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+.blue-line {
+  position: absolute;
+  bottom: calc(80% + 12px);
+  width: 20px;
+  height: 4px;
+  border-radius: 2px;
+  background: blue;
+  left: calc(50% - 10px);
+  transform: rotate(-135deg);
+  animation: blueline 1.5s ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes blueline {
+  0% {
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    bottom: 100%;
+    left: 0;
+    opacity: 0;
+  }
 }
 
 @keyframes up {
@@ -88,4 +192,6 @@
     opacity: 0;
   }
 }
+
+
 
