@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/main/talkwindow",
-    "pages/main/wgtloading"
+    "pages/main/wgtloading",
+    "pages/main/study",
+    "pages/main/article"
   ],
   "window":{
     "backgroundTextStyle":"light",

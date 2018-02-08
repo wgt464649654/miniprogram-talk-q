@@ -72,27 +72,34 @@ page {
 }
 
 .liaoren {
-  background: url(http://img1.imgtn.bdimg.com/it/u=611991521,254006198&fm=27&gp=0.jpg) no-repeat;
+  background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1518114325631&di=857385c80f075d24367e52c74ad7399e&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fpic%2Ff%2F45%2F1f781138916.jpg) no-repeat;
   background-size:15% 100%;
 }
 
 .happy {
-  background: url(http://img5.imgtn.bdimg.com/it/u=3843130513,1723497110&fm=200&gp=0.jpg) no-repeat;
+  background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1518114250833&di=0a8d4aa14803eb196049fc7803e953c1&imgtype=0&src=http%3A%2F%2Fimg5q.duitang.com%2Fuploads%2Fitem%2F201410%2F19%2F20141019115534_ZNvJJ.jpeg) no-repeat;
   background-size:15% 100%;
 }
 
 .complain {
-  background: url(https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=1836327264,537727500&fm=85&s=96004DA517B1619E1B31157A03005038&w=121&h=75&img.JPEG) no-repeat;
+  background: url(https://ss0.baidu.com/73F1bjeh1BF3odCf/it/u=2138927799,2778322786&fm=85&s=7828BE55480345450692AC680300E01B) no-repeat;
   background-size:15% 100%;
 }
 .abuse {
-  background: url(https://ss0.baidu.com/73F1bjeh1BF3odCf/it/u=2138927799,2778322786&fm=85&s=7828BE55480345450692AC680300E01B) no-repeat;
+  background: url(https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=1836327264,537727500&fm=85&s=96004DA517B1619E1B31157A03005038&w=121&h=75&img.JPEG) no-repeat;
   background-size:15% 100%;
 }
 
 .bite {
   background: url(https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1367713562,2616392863&fm=27&gp=0.jpg) no-repeat;
   background-size:15% 100%;
+  border: 1px solid blue !important;
+}
+
+.study {
+  background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1518111764112&di=9cf04f4e279595dd536da5d7f206f974&imgtype=0&src=http%3A%2F%2Fb.hiphotos.baidu.com%2Fzhidao%2Fwh%253D450%252C600%2Fsign%3D8cc638a0992397ddd62c90006cb29e81%2F03087bf40ad162d91b2d635b19dfa9ec8b13cdb2.jpg) no-repeat;
+  background-size:15% 100%;
+  border: 1px solid purple !important;
 }
 
 .Kanshan--dynamic {
