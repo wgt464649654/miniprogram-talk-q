@@ -1,6 +1,6 @@
 <!-- <view wx:if='{{fireworks === "play"}}' class='fireworks'> -->
 <view class='fireworks'>
-  <canvas canvas-id='fireworks'></canvas>
+  <view class='green-dot'></view>
 </view>
 <view class='talk-window'>
   <view class='content'>
