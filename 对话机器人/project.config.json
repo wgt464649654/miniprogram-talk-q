@@ -13,29 +13,6 @@
 	"projectname": "github%E5%B0%8FQ",
 	"isGameTourist": false,
 	"condition": {
-		"weapp": {
-			"current": -1,
-			"list": [
-				{
-					"id": -1,
-					"name": "loading",
-					"pathName": "pages/main/wgtloading",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "talkwindow",
-					"pathName": "pages/main/talkwindow",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "game",
-					"pathName": "pages/main/game",
-					"query": ""
-				}
-			]
-		},
 		"search": {
 			"current": -1,
 			"list": []
@@ -61,6 +38,12 @@
 					"id": -1,
 					"name": "study",
 					"pathName": "pages/main/study",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "game",
+					"pathName": "pages/main/game",
 					"query": ""
 				}
 			]

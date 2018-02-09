@@ -16,11 +16,35 @@
 </view>
 
 <button class='run-button' disabled='{{!canRun}}' bindtap='run'>奔跑</button>
-<button class='run-button2' disabled='{{!canRun}}' bindtap='run'>奔跑</button>
 
 <view wx:if='{{showStartButtom}}' class='start-buttom' bindtap='start'>{{startButtomText}}</view>
 
-<view class='result' wx:if='{{result}}' bindtap='close'>
+<view class='result' wx:if='{{result === "win"}}' bindtap='close'>
   <image class='victory' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1518163177083&di=03120c3a477d4a2b34e451498628c7f2&imgtype=0&src=http%3A%2F%2Fimg.taopic.com%2Fuploads%2Fallimg%2F140429%2F235016-14042922151231.jpg'></image>
-  <view class='victory-text'>手速神速，单身一百年！</view>
+  <view class='victory-text'>{{levelText}}选手！手速神速，单身一百年！</view>
+</view>
+
+<view class='result' wx:if='{{result === "lose"}}' bindtap='close'>
+  <image class='victory' src='http://pic.qbaobei.com/Uploads/Picture/2016-08-08/829d907509dc3385305b6cd26a203765.jpeg'></image>
+  <view class='victory-text'>竟然跑不过一个机器人！</view>
+</view>
+
+<view wx:if='{{showLevel}}' class='level-select'>
+  <text style='color: red'>选择难度：</text>
+  <button size='mini' data-level='20' data-text='塑料' bindtap='selectLevel'>塑料</button>
+  <button size='mini' data-level='17' data-text='青铜' bindtap='selectLevel'>青铜</button>
+  <button size='mini' data-level='14' data-text='白银' bindtap='selectLevel'>白银</button>
+  <button size='mini' data-level='10' data-text='黄金' bindtap='selectLevel'>黄金</button>
+  <button size='mini' data-level='8' data-text='砖石' bindtap='selectLevel'>砖石</button>
+  <button size='mini' data-level='7' data-text='超凡大师' bindtap='selectLevel'>大师</button>
+  <button size='mini' data-level='6' data-text='最强王者' bindtap='selectLevel'>王者</button>
+</view>
+
+<view wx:if='{{!showLevel}}' class='level-select'>
+  <text>当前难度：{{levelText}}! 请坚持跑完...</text>
+  <button disabled='{{canRun}}' size='mini' class='right' bindtap='reSelectLevel'>重新选择</button>
+</view>
+
+<view wx:if='{{reward}}' class='reward' data-reward='{{reward.name}}' bindtap='getReward'>
+  <image class='reward-pic' src='../../images/shanxian.jpg'></image>
 </view>

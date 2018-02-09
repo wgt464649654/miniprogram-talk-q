@@ -3,7 +3,7 @@
   height: 2px;
   width: 100%;
   background: #DC9A00;
-  margin-top: 100px;
+  margin-top: 120px;
 }
 
 .user-line {
@@ -11,7 +11,7 @@
   height: 2px;
   width: 100%;
   background: #DC9A00;
-  margin-top: 200px;
+  margin-top: 220px;
 }
 
 .run-avatar-div {
@@ -22,10 +22,41 @@
   left: 5%;
 }
 
- .robotr-run-10 {
+.robotr-run-20 {
+  animation: robotRun 20s linear;
+  animation-fill-mode: forwards;
+}
+
+.robotr-run-17 {
+  animation: robotRun 17s linear;
+  animation-fill-mode: forwards;
+}
+
+.robotr-run-14 {
+  animation: robotRun 14s linear;
+  animation-fill-mode: forwards;
+}
+
+.robotr-run-10 {
   animation: robotRun 10s linear;
   animation-fill-mode: forwards;
 }
+
+.robotr-run-8 {
+  animation: robotRun 8s linear;
+  animation-fill-mode: forwards;
+}
+
+.robotr-run-7 {
+  animation: robotRun 7s linear;
+  animation-fill-mode: forwards;
+}
+
+.robotr-run-6 {
+  animation: robotRun 6s linear;
+  animation-fill-mode: forwards;
+}
+
 @keyframes robotRun {
   0% {
 
@@ -45,7 +76,7 @@
   position: absolute;
   width: 30px;
   height: 30px;
-  background: blue;
+  background: pink;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
   border-bottom-left-radius: 50%;
@@ -75,14 +106,15 @@
 }
 
 .run-button {
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
   text-align: center;
   border-radius: 50%;
-  background: white;
+  background: #3286F7;
+  color: white;
   position: absolute;
-  margin-top: 90vw;
+  margin-top: 100vw;
   right: 20px;
   font-size: 3.5vw;
 }
@@ -105,15 +137,16 @@ button::after {
 }
 
 .start-buttom {
-  width: 120px;
-  height: 60px;
-  line-height: 60px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
   text-align: center;
-  border-radius: 50%;
-  background: white;
+  border-radius: 20%;
+  background: #3286F7;
+  color: white;
   position: absolute;
   margin-top: 100vw;
-  left: calc(50% - 60px);
+  left: 20px;
 }
 
 .result {
@@ -144,4 +177,43 @@ button::after {
   100% {
     margin-left: 50%;
   }
+}
+
+.level-select {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.level-select text {
+  margin-left: 5px;
+  margin-top: 2px;
+  font-size: 3vw;
+  opacity: 0.6;
+}
+.level-select button {
+  font-size: 2.5vw;
+}
+
+.right {
+  margin-right: 0;
+}
+
+.reward {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  color: white;
+  position: absolute;
+  margin-top: 100vw;
+  left: 20px;
+}
+
+.reward-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
 }
