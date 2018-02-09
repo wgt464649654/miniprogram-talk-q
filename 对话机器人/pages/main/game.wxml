@@ -1,0 +1,26 @@
+<view class='robot-line'>
+  <view class='run-avatar-div {{robotClass}}'>
+    <view class='avatar-assist'></view>
+    <image class='run-pic' src='../../images/robot-yellow.png'></image>
+    <!-- <view class='red-dot'></view> -->
+  </view>
+  <view class='end-point'></view>
+</view>
+
+<view class='user-line'>
+  <view class='run-avatar-div' style='left: {{userLeft}}%'>
+    <view class='avatar-assist'></view>
+    <image class='run-pic' src='../../images/robot-yellow.png'></image>
+  </view>
+  <view class='end-point'></view>
+</view>
+
+<button class='run-button' disabled='{{!canRun}}' bindtap='run'>奔跑</button>
+<button class='run-button2' disabled='{{!canRun}}' bindtap='run'>奔跑</button>
+
+<view wx:if='{{showStartButtom}}' class='start-buttom' bindtap='start'>{{startButtomText}}</view>
+
+<view class='result' wx:if='{{result}}' bindtap='close'>
+  <image class='victory' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1518163177083&di=03120c3a477d4a2b34e451498628c7f2&imgtype=0&src=http%3A%2F%2Fimg.taopic.com%2Fuploads%2Fallimg%2F140429%2F235016-14042922151231.jpg'></image>
+  <view class='victory-text'>手速神速，单身一百年！</view>
+</view>

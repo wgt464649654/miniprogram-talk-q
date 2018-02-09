@@ -18,8 +18,8 @@
     <navigator url="../main/study"><button class='study' type="primary" plain>学霸小Q</button></navigator>
     <navigator url="../main/wgtloading"><button class='bite' type="warn" plain>敬请期待小Q...</button></navigator>
   </view>
-  <view class='Kanshan--dynamic'>
+  <navigator class='Kanshan--dynamic' url='../main/game'>
     <image src='../../images/zhihu.png'></image>
-  </view>
+  </navigator>
   <view class='Kanshan--dynamic_hidden'></view>
 </view>

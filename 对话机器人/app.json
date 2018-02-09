@@ -5,12 +5,13 @@
     "pages/main/talkwindow",
     "pages/main/wgtloading",
     "pages/main/study",
-    "pages/main/article"
+    "pages/main/article",
+    "pages/main/game"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "欢迎来到小Q的世界",
+    "navigationBarTitleText": "",
     "navigationBarTextStyle":"black"
   }
 }
