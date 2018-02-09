@@ -1,25 +1,25 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" type="default"> 来和我聊天吧 </button>
-    <block wx:else>
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" type="primary" size='mini' class='login'> 登录 </button>
+  <block wx:else>
+    <view class="userinfo">
       <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
       <view class="userinfo-nickname">
         hi~，{{userInfo.nickName}}
       </view>
-    </block>
-  </view>
-  <!-- 菜单列表 -->
-  <view class="menu">
-    <navigator url="../main/talkwindow?type=liaoren"><button class='liaoren' plain>撩人小Q</button></navigator>
-    <navigator url="../main/talkwindow?type=qianzou"><button class='happy' type="primary" plain>欠揍小Q</button></navigator>
-    <!-- <navigator url="../main/talkwindow?type=bapo"><button class='complain' type="warn" plain>八婆小Q</button></navigator> -->
-    <navigator url="../main/talkwindow?type=daodao"><button class='abuse' type="warn" plain>叨叨小Q</button></navigator>
-    <navigator url="../main/study"><button class='study' type="primary" plain>学霸小Q</button></navigator>
-    <navigator url="../main/wgtloading"><button class='bite' type="warn" plain>敬请期待小Q...</button></navigator>
-  </view>
-  <navigator class='Kanshan--dynamic' url='../main/game'>
-    <image src='../../images/zhihu.png'></image>
-  </navigator>
-  <view class='Kanshan--dynamic_hidden'></view>
+    </view>
+    <!-- 菜单列表 -->
+    <view class="menu">
+      <navigator url="../main/talkwindow?type=liaoren"><button class='liaoren' plain>撩人小Q</button></navigator>
+      <navigator url="../main/talkwindow?type=qianzou"><button class='happy' type="primary" plain>欠揍小Q</button></navigator>
+      <!-- <navigator url="../main/talkwindow?type=bapo"><button class='complain' type="warn" plain>八婆小Q</button></navigator> -->
+      <navigator url="../main/talkwindow?type=daodao"><button class='abuse' type="warn" plain>叨叨小Q</button></navigator>
+      <navigator url="../main/study"><button class='study' type="primary" plain>学霸小Q</button></navigator>
+      <navigator url="../main/wgtloading"><button class='bite' type="warn" plain>敬请期待小Q...</button></navigator>
+    </view>
+    <navigator class='Kanshan--dynamic' url='../main/game'>
+      <image src='../../images/zhihu.png'></image>
+    </navigator>
+    <view class='Kanshan--dynamic_hidden'></view>
+  </block>
 </view>
