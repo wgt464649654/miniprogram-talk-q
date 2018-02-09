@@ -21,7 +21,7 @@
 
 <view class='result' wx:if='{{result === "win"}}' bindtap='close'>
   <image class='victory' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1518163177083&di=03120c3a477d4a2b34e451498628c7f2&imgtype=0&src=http%3A%2F%2Fimg.taopic.com%2Fuploads%2Fallimg%2F140429%2F235016-14042922151231.jpg'></image>
-  <view class='victory-text'>{{levelText}}选手！手速神速，单身一百年！</view>
+  <view class='victory-text'>{{levelText}}选手！手速神速，单身{{100-(level-6)*5}}年！</view>
 </view>
 
 <view class='result' wx:if='{{result === "lose"}}' bindtap='close'>
