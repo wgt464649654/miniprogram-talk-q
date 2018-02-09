@@ -4,7 +4,7 @@ Page({
     addNum: 1.5,
     showStartButtom: true,
     startButtomText: '开始',
-    showLevel: true
+    showLevel: true,
   },
 
   run: function() {
@@ -47,24 +47,35 @@ Page({
       showStartButtom: false,
       startTime: new Date().getTime()
     })
-    if (Math.floor(Math.random() * 10) > 5) {
-      setTimeout(() => {
-        this.setData({
-          reward: {
-            name: '闪现'
-          }
-        })
-      }, 5000)
-      setTimeout(() => {
-        this.setData({
-          reward: ''
-        })
-      }, 6000)
+    let random = Math.floor(Math.random() * 10)
+    let reward = {}
+    if (random < 2) {
+      reward = ['闪现']
+    } else if (random < 4) {
+      reward = ['后退']
+    } else if (random < 6) {
+      reward = ['后退', '闪现']
+    } else if (random < 8) {
+      reward = ['闪现', '后退']
+    } else if (random < 9) {
+      reward = ['闪现', '闪现']
+    } else if (random < 10) {
+      reward = ['后退', '后退']
     }
+    setTimeout(() => {
+      this.setData({
+        reward: reward
+      })
+    }, 3000)
+    setTimeout(() => {
+      this.setData({
+        reward: ''
+      })
+    }, 5000)
   },
 
   close: function() {
-    if ((new Date().getTime() - this.data.victoryTime)/1000 < 1.2) {
+    if ((new Date().getTime() - this.data.victoryTime)/1000 < 1) {
       return;
     }
     this.setData({
@@ -94,10 +105,19 @@ Page({
 
   getReward: function(e) {
     let name = e.currentTarget.dataset.reward;
-    if (name == '闪现') {
+    let reward = this.data.reward;
+    if (name.indexOf('闪现') > -1) {
+      console.log(reward)
+      reward.splice(reward.indexOf('闪现'), 1)
       this.setData({
         userLeft: this.data.userLeft + 10,
-        reward: ''
+        reward: reward
+      })
+    } else if (name.indexOf('后退') > -1) {
+      reward.splice(reward.indexOf('后退'), 1)
+      this.setData({
+        userLeft: this.data.userLeft > 10 ? this.data.userLeft - 5 : 5,
+        reward: reward
       })
     }
   }

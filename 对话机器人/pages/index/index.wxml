@@ -10,12 +10,12 @@
     </view>
     <!-- 菜单列表 -->
     <view class="menu">
-      <navigator url="../main/talkwindow?type=liaoren"><button class='liaoren' plain>撩人小Q</button></navigator>
+      <navigator url="../main/talkwindow?type=liaoren"><button class='liaoren' type="primary" plain>撩人小Q</button></navigator>
       <navigator url="../main/talkwindow?type=qianzou"><button class='happy' type="primary" plain>欠揍小Q</button></navigator>
       <!-- <navigator url="../main/talkwindow?type=bapo"><button class='complain' type="warn" plain>八婆小Q</button></navigator> -->
-      <navigator url="../main/talkwindow?type=daodao"><button class='abuse' type="warn" plain>叨叨小Q</button></navigator>
+      <navigator url="../main/talkwindow?type=daodao"><button class='abuse' type="primary" plain>叨叨小Q</button></navigator>
       <navigator url="../main/study"><button class='study' type="primary" plain>学霸小Q</button></navigator>
-      <navigator url="../main/wgtloading"><button class='bite' type="warn" plain>敬请期待小Q...</button></navigator>
+      <navigator url="../main/wgtloading"><button class='bite' type="default" plain>敬请期待小Q...</button></navigator>
     </view>
     <navigator class='Kanshan--dynamic' url='../main/game'>
       <image src='../../images/zhihu.png'></image>

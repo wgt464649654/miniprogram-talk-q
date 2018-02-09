@@ -37,13 +37,8 @@
   animation-fill-mode: forwards;
 }
 
-.robotr-run-10 {
-  animation: robotRun 10s linear;
-  animation-fill-mode: forwards;
-}
-
-.robotr-run-8 {
-  animation: robotRun 8s linear;
+.robotr-run-9 {
+  animation: robotRun 9s linear;
   animation-fill-mode: forwards;
 }
 
@@ -54,6 +49,11 @@
 
 .robotr-run-6 {
   animation: robotRun 6s linear;
+  animation-fill-mode: forwards;
+}
+
+.robotr-run-5 {
+  animation: robotRun 5s linear;
   animation-fill-mode: forwards;
 }
 
@@ -200,15 +200,20 @@ button::after {
 }
 
 .reward {
+  position: absolute;
+  margin-top: 100vw;
+  left: 20px;
+}
+
+.one-reward {
   width: 50px;
   height: 50px;
   line-height: 50px;
   text-align: center;
   border-radius: 50%;
   color: white;
-  position: absolute;
-  margin-top: 100vw;
-  left: 20px;
+  display: inline-block;
+  margin-right: 5px; 
 }
 
 .reward-pic {
