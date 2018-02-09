@@ -10,7 +10,7 @@
 <view class='user-line'>
   <view class='run-avatar-div' style='left: {{userLeft}}%'>
     <view class='avatar-assist'></view>
-    <image class='run-pic' src='../../images/robot-yellow.png'></image>
+    <image class='run-pic' src='{{userInfo.avatarUrl}}'></image>
   </view>
   <view class='end-point'></view>
 </view>

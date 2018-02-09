@@ -48,6 +48,12 @@ Page({
     })
   },
 
+  onShow: function() {
+    this.setData({
+      userInfo: getApp().globalData.userInfo
+    })
+  },
+
   onShareAppMessage: function () {
   
   }
