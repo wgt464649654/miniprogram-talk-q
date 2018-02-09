@@ -54,7 +54,4 @@ Page({
     })
   },
 
-  onShareAppMessage: function () {
-  
-  }
 })
