@@ -1,0 +1,65 @@
+page {
+  background: white;
+}
+
+.login {
+  margin-top: 150px;
+  margin-left: 43%;
+}
+
+.menu {
+  margin-top: 25px;
+  opacity: 0;
+  animation: opacityShow 3s;
+  animation-fill-mode: forwards;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.menu button {
+  margin-bottom: 10px;
+}
+
+.pic-view {
+  width: 120px;
+  height: 140px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.static {
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 2px #888888;
+}
+
+.zhihu {
+  position: absolute;
+  width: 6480px;
+  height: 120px;
+  animation: dynamic 2.4s steps(54) infinite;
+}
+@keyframes dynamic {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -6480px;
+  }
+}
+
+.navigator-hover {
+  background:white;
+}
+
+ .game-name {
+  position: absolute;
+  bottom: 0;
+} 
+
+

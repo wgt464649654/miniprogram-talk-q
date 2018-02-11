@@ -45,6 +45,12 @@
 					"name": "game",
 					"pathName": "pages/main/game",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "myhome",
+					"pathName": "pages/main/myhome",
+					"query": ""
 				}
 			]
 		}

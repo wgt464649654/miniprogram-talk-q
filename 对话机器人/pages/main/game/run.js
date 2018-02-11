@@ -7,7 +7,7 @@ Page({
     showLevel: true,
   },
 
-  run: function() {
+  run: function () {
     if (this.data.userLeft >= (90 - this.data.addNum)) {
       this.setData({
         userLeft: 90
@@ -37,8 +37,8 @@ Page({
     })
   },
 
-  start: function() {
-    if (!this.data.level) {
+  start: function () {
+    if (!this.data.level || this.data.showLevel) {
       return;
     }
     this.setData({
@@ -74,8 +74,8 @@ Page({
     }, 5000)
   },
 
-  close: function() {
-    if ((new Date().getTime() - this.data.victoryTime)/1000 < 1) {
+  close: function () {
+    if ((new Date().getTime() - this.data.victoryTime) / 1000 < 1) {
       return;
     }
     this.setData({
@@ -83,13 +83,13 @@ Page({
     })
   },
 
-  onShow: function() {
+  onShow: function () {
     this.setData({
       userInfo: getApp().globalData.userInfo
     })
   },
 
-  selectLevel: function(e) {
+  selectLevel: function (e) {
     this.setData({
       level: e.currentTarget.dataset.level,
       levelText: e.currentTarget.dataset.text,
@@ -97,13 +97,13 @@ Page({
     })
   },
 
-  reSelectLevel: function() {
+  reSelectLevel: function () {
     this.setData({
       showLevel: true
     })
   },
 
-  getReward: function(e) {
+  getReward: function (e) {
     let name = e.currentTarget.dataset.reward;
     let reward = this.data.reward;
     if (name.indexOf('闪现') > -1) {

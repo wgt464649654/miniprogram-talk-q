@@ -1,17 +1,32 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/logs/logs",
-    "pages/main/talkwindow",
-    "pages/main/wgtloading",
-    "pages/main/study",
-    "pages/main/article",
-    "pages/main/game"
+    "pages/main/game/index",
+    "pages/main/game/run",
+    "pages/main/components/wgtloading",
+    "pages/main/myhome"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "百变小Q",
+    "navigationBarTitleText": "Q__Q",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "backgroundColor": "white",
+    "selectedColor": "#4F99F5",
+    "list": [
+      {
+        "pagePath": "pages/main/game/index",
+        "text": "游戏",
+        "iconPath": "images/robot.jpg",
+        "selectedIconPath": "images/robot.jpg"
+      },
+      {
+        "pagePath": "pages/main/myhome",
+        "text": "我的",
+        "iconPath": "images/author.jpg",
+        "selectedIconPath": "images/author.jpg"
+      }
+    ]
   }
 }

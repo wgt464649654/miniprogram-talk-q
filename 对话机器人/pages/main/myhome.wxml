@@ -1,0 +1,6 @@
+<view class='bar'>
+  <image src='{{userInfo.avatarUrl}}' background-size="cover"></image>
+  <view>
+    {{userInfo.nickName}}
+  </view>
+</view>

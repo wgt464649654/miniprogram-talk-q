@@ -1,7 +1,7 @@
 <view class='robot-line'>
   <view class='run-avatar-div {{robotClass}}'>
     <view class='avatar-assist'></view>
-    <image class='run-pic' src='../../images/robot-yellow.png'></image>
+    <image class='run-pic' src='../../../images/robot-yellow.png'></image>
     <!-- <view class='red-dot'></view> -->
   </view>
   <view class='end-point'></view>
@@ -46,7 +46,7 @@
 </view>
 <view wx:if='{{reward}}' class='reward'>
   <view wx:for='{{reward}}' data-reward='{{item + index}}' class='one-reward' bindtap='getReward' wx:key='index'>
-    <view wx:if='{{item == "闪现"}}'><image class='reward-pic' src='../../images/shanxian.jpg'></image></view>
-    <view wx:if='{{item == "后退"}}'><image class='reward-pic' src='../../images/back.jpg'></image></view>
+    <view wx:if='{{item == "闪现"}}'><image class='reward-pic' src='../../../images/shanxian.jpg'></image></view>
+    <view wx:if='{{item == "后退"}}'><image class='reward-pic' src='../../../images/back.jpg'></image></view>
   </view>
 </view>
