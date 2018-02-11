@@ -22,18 +22,20 @@ page {
 }
 
 .pic-view {
-  width: 120px;
-  height: 140px;
+  width: 35vw;
+  height: 38vw;
   position: relative;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  margin: 10px 0;
 }
 
 .static {
-  height: 100px;
-  width: 100px;
+  height: 90%;
+  width: 90%;
   border-radius: 10px;
   box-shadow: 3px 3px 2px #888888;
 }
@@ -57,9 +59,9 @@ page {
   background:white;
 }
 
- .game-name {
-  position: absolute;
-  bottom: 0;
-} 
+.game-name {
+  margin-top: 5px;
+}
+
 
 
