@@ -8,7 +8,6 @@
   font-size: 5vw;
   color: gray;
   z-index: 9;
-  background: url(http://imgstore.cdn.sogou.com/app/a/100540002/771569.jpg);
   background-size: 100% 100%;
 }
 

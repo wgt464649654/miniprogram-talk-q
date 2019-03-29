@@ -1,10 +1,19 @@
 //app.js
 App({
   onLaunch: function () {
+    wx.getSystemInfo({
+      success: e => {
+        this.globalData.StatusBar = e.statusBarHeight;
+        // let custom = wx.getMenuButtonBoundingClientRect();
+        // this.globalData.Custom = custom;
+        this.globalData.CustomBar = - e.statusBarHeight;
+      }
+    })
+    
     // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+    // var logs = wx.getStorageSync('logs') || []
+    // logs.unshift(Date.now())
+    // wx.setStorageSync('logs', logs)
 
     // 登录
     wx.login({

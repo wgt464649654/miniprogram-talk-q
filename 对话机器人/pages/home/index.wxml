@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view class="container">
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" type="primary" size='mini' class='login'> 登录 </button>
+  <block wx:else>
+    <!-- 菜单列表 -->
+    <view class="menu">
+      <navigator class='pic-view' url='./play/index'>
+        <image src='../../../images/play.jpg' class='static' ></image>
+        <view class='game-name'>去玩啦</view>
+      </navigator>
+
+      <navigator class='pic-view' url='./min-eat/index'>
+        <image src='../../../images/eat.jpg' class='static' ></image>
+        <view class='game-name'>阿敏小食堂</view>
+      </navigator>
+
+      <navigator class='pic-view' url='./about-guan/index'>
+        <image src='../../../images/aguan.jpg' class='static' ></image>
+        <view class='game-name'>关于阿观</view>
+      </navigator>
+  
+      <navigator class='pic-view' url='./about-min/index'>
+        <image src='../../../images/amin.jpg' class='static'>
+        </image>
+        <view class='game-name'>关于阿敏</view>
+      </navigator>
+
+      <navigator class='pic-view' url='/components/loading/index'>
+        <image src='http://img1.imgtn.bdimg.com/it/u=1355873073,1957495672&fm=27&gp=0.jpg' class='static' ></image>
+        <view class='game-name'>敬请期待...</view>
+      </navigator>
+      <!--动态小q-->
+      <!-- <navigator class='pic-view' url='./run'>
+        <image src='../../../images/zhihu.png' class='zhihu'>
+        </image>
+      </navigator> -->
+    </view>
+    
+    <!-- <navigator url="../main/wgtloading"><button class='feature-q' type="primary" plain>更多游戏，敬请期待小Q...</button></navigator> -->
+  </block>
+</view>
