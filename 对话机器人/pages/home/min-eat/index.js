@@ -22,6 +22,7 @@ Page({
     VerticalNavTop: 0,
     list: [],
     load: true,
+    loading: true, // 页面初始化加载
     urls: [
       '../../../images/together1.jpg',
       '../../../images/together2.jpg',
@@ -29,95 +30,17 @@ Page({
     ]
   },
   onLoad() {
-    wx.showLoading({
-      title: '加载中...',
-      mask: true
-    });
-    let list = [
-      {
-        category: '小吃',
-        index: '0',
-        data: [
-          {
-            name: '煎饺',
-            createUser: '敏',
-            describe: '好吃',
-            id: 'jianjiao'
-          },
-          {
-            name: '土豆腊肉炒饭',
-            createUser: '敏',
-            describe: '好吃到哭',
-            id: '土豆腊肉炒饭',
-            imgs: [
-              '../../../images/chaofan.jpg',
-            ]
-          }
-        ]
-      },
-      {
-        category: '甜品',
-        index: '1',
-        data: [
-          {
-            name: '红糖红枣芋丸',
-            likeNums: 0,
-            createUser: '敏',
-            id: 'hongzao'
-          },
-          {
-            name: '布丁🍮',
-            likeNums: 0,
-            createUser: '观',
-            id: 'buding'
-          }
-        ]
-      },
-      {
-        category: '面食',
-        index: '2',
-        data: [
-          {
-            name: '葱油拌面',
-            likeNums: 0,
-            createUser: '敏',
-            describe: '阿敏独家制作',
-            id: 'congyou'
-          }
-        ]
-      },
-      {
-        category: '鱼肉',
-        index: '3',
-        data: [
-          {
-            name: '沸腾虾',
-            likeNums: 0,
-            createUser: '观',
-            describe: '费油',
-            id: 'feiteng'
-          },
-          {
-            name: '可乐鸡翅',
-            likeNums: 0,
-            createUser: '观',
-            id: 'kele'
-          },
-          {
-            name: '糖醋排骨',
-            createUser: '敏',
-            describe: '要多放点糖哦',
-            id: '糖醋排骨',
-            imgs: [
-              '../../../images/tangcupaigu.jpg',
-            ]
-          }
-        ]
+    const that = this;
+    wx.request({
+      url: 'https://www.easy-mock.com/mock/5bfd184eb9f1023cf648fe55/wgt/eat/list',
+      success(res) {
+        const list = res.data.data;
+        that.setData({
+          loading: false,
+          list,
+          listCur: list[0]
+        })
       }
-    ];
-    this.setData({
-      list: list,
-      listCur: list[0]
     })
   },
   onReady() {

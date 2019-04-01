@@ -5,22 +5,22 @@
     <!-- 菜单列表 -->
     <view class="menu">
       <navigator class='pic-view' url='./play/index'>
-        <image src='../../../images/play.jpg' class='static' ></image>
+        <image src='https://wgt.oss-cn-shanghai.aliyuncs.com/play.jpg?Expires=1554107635&OSSAccessKeyId=TMP.AQHq7uZGPml6aRIOQoQcfZUhWeAw8WOzs-qi9s3ylskmHEDnowsps0M2vQJhADAtAhQo8KFcBHthquHNWe8PMPDd3q63ugIVAM4MPoI61Xvguy3EQ3xXdgQReb-n&Signature=nNVBMUPjqIal4c3S1L9nNcz1Qt0%3D' class='static' ></image>
         <view class='game-name'>去玩啦</view>
       </navigator>
 
       <navigator class='pic-view' url='./min-eat/index'>
-        <image src='../../../images/eat.jpg' class='static' ></image>
+        <image src='https://wgt.oss-cn-shanghai.aliyuncs.com/eat.jpg?Expires=1554107621&OSSAccessKeyId=TMP.AQHq7uZGPml6aRIOQoQcfZUhWeAw8WOzs-qi9s3ylskmHEDnowsps0M2vQJhADAtAhQo8KFcBHthquHNWe8PMPDd3q63ugIVAM4MPoI61Xvguy3EQ3xXdgQReb-n&Signature=l0Ot5HxBymPhkzRwSNVVCaKAelc%3D' class='static' ></image>
         <view class='game-name'>阿敏小食堂</view>
       </navigator>
 
       <navigator class='pic-view' url='./about-guan/index'>
-        <image src='../../../images/aguan.jpg' class='static' ></image>
+        <image src='https://wgt.oss-cn-shanghai.aliyuncs.com/aguan.jpg?Expires=1554107501&OSSAccessKeyId=TMP.AQHq7uZGPml6aRIOQoQcfZUhWeAw8WOzs-qi9s3ylskmHEDnowsps0M2vQJhADAtAhQo8KFcBHthquHNWe8PMPDd3q63ugIVAM4MPoI61Xvguy3EQ3xXdgQReb-n&Signature=%2Bz9Mcnz90425FJw9Q5P8Onik0OU%3D' class='static' ></image>
         <view class='game-name'>关于阿观</view>
       </navigator>
   
       <navigator class='pic-view' url='./about-min/index'>
-        <image src='../../../images/amin.jpg' class='static'>
+        <image src="https://wgt.oss-cn-shanghai.aliyuncs.com/amin.jpg?Expires=1554107576&OSSAccessKeyId=TMP.AQHq7uZGPml6aRIOQoQcfZUhWeAw8WOzs-qi9s3ylskmHEDnowsps0M2vQJhADAtAhQo8KFcBHthquHNWe8PMPDd3q63ugIVAM4MPoI61Xvguy3EQ3xXdgQReb-n&Signature=mdK1uQRJ3kZzGLjpMlO%2FC4qR%2FHA%3D" class='static'>
         </image>
         <view class='game-name'>关于阿敏</view>
       </navigator>
