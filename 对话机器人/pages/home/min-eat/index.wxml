@@ -19,10 +19,11 @@
       <view class="cu-list menu-avatar">
         <!-- 每类的条目 -->
         <view class="cu-item" wx:for="{{item.data}}" wx:key>
-          <image src="{{'../../../images/' + (item.createUser === '敏' ? 'amin.jpg' : 'aguan.jpg')}}" class="cu-avatar round lg"></image>
+          <image src="{{'../../../images/' + (item.createUser === '敏' ? 'amin.jpg' : 'aguan.jpg')}}" class="cu-avatar round lg" bindtap='showImgs' data-imgs="{{item.imgs}}"></image>
           <view class="content">
             <view class="text-grey">
               <text class="text-cut">{{item.name}}</text>
+              <view class='icon-pic text-yellow' wx:if="{{item.imgs&&item.imgs.length>0}}"></view>
               <!-- <view class="cu-tag round bg-orange sm">{{item.createUser}}</view> -->
             </view>
             <view class="text-gray text-sm flex">
@@ -32,11 +33,21 @@
             </view>
           </view>
           <view class="action">
-            <view class="text-grey text-sm">{{item.likeNums}}</view>
+            <view class="text-grey text-sm">{{item.likeNums ? item.likeNums : ''}}</view>
             <view class="{{item.likeNums > 0 ? 'icon-likefill text-red' : 'icon-like'}}" data-id="{{item.id}}" bindtap="like" />
           </view>
         </view>
       </view>
     </view>
   </scroll-view>
+</view>
+
+<view class="cu-modal {{showDetailImgs?'show':''}}" bindtap="hideModal">
+  <view class="cu-dialog" catchtap>
+    <swiper class="screen-swiper round-dot" indicator-dots="true" circular="true">
+      <swiper-item wx:for="{{detailImgs}}" wx:key>
+        <image style="width:100%" src="{{item}}"  mode='aspectFill'></image>
+      </swiper-item>
+    </swiper>
+  </view>
 </view>

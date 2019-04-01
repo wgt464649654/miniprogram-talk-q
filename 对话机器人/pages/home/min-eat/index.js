@@ -23,10 +23,9 @@ Page({
     list: [],
     load: true,
     urls: [
-      '../../../images/aguan.jpg',
-      '../../../images/amin.jpg',
-      '../../../images/aguan.jpg',
-      '../../../images/amin.jpg',
+      '../../../images/together1.jpg',
+      '../../../images/together2.jpg',
+      '../../../images/together3.jpg',
     ]
   },
   onLoad() {
@@ -44,6 +43,15 @@ Page({
             createUser: '敏',
             describe: '好吃',
             id: 'jianjiao'
+          },
+          {
+            name: '土豆腊肉炒饭',
+            createUser: '敏',
+            describe: '好吃到哭',
+            id: '土豆腊肉炒饭',
+            imgs: [
+              '../../../images/chaofan.jpg',
+            ]
           }
         ]
       },
@@ -53,13 +61,13 @@ Page({
         data: [
           {
             name: '红糖红枣芋丸',
-            likeNums: 1,
+            likeNums: 0,
             createUser: '敏',
             id: 'hongzao'
           },
           {
             name: '布丁🍮',
-            likeNums: 1,
+            likeNums: 0,
             createUser: '观',
             id: 'buding'
           }
@@ -71,7 +79,7 @@ Page({
         data: [
           {
             name: '葱油拌面',
-            likeNums: 1,
+            likeNums: 0,
             createUser: '敏',
             describe: '阿敏独家制作',
             id: 'congyou'
@@ -94,6 +102,15 @@ Page({
             likeNums: 0,
             createUser: '观',
             id: 'kele'
+          },
+          {
+            name: '糖醋排骨',
+            createUser: '敏',
+            describe: '要多放点糖哦',
+            id: '糖醋排骨',
+            imgs: [
+              '../../../images/tangcupaigu.jpg',
+            ]
           }
         ]
       }
@@ -167,5 +184,23 @@ Page({
     this.setData({
       list
     })
-  }
+  },
+  // 展示图片
+  showImgs(e) {
+    const detailImgs = e.currentTarget.dataset.imgs
+    if (detailImgs && detailImgs.length > 0) {
+      console.log(detailImgs)
+      this.setData({
+        showDetailImgs: true,
+        detailImgs
+      })
+    }
+  },
+  // 隐藏图片
+  hideModal(e) {
+    this.setData({
+      showDetailImgs: false,
+      detailImgs: []
+    })
+  },
 })
